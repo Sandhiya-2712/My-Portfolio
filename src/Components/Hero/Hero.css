@@ -1,0 +1,156 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatImage {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.profile-image {
+  height: 250px;
+  border-radius: 50%;
+  margin-top: 90px;
+  animation: floatImage 4s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+  padding: 40px 5%;
+  text-align: center;
+  box-sizing: border-box;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-weight: 600;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeInUp 1s ease 0.2s forwards;
+}
+
+.hero h1 span {
+  background: linear-gradient(270deg, rgb(180, 16, 158) 10%, rgb(30, 255, 0) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  max-width: 800px;
+  font-size: 24px;
+  line-height: 40px;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeInUp 1s ease 0.4s forwards;
+}
+
+.hero-action {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 50px;
+  opacity: 0;
+  animation: fadeInUp 1s ease 0.6s forwards;
+}
+
+.hero-connect {
+  padding: 15px 25px;
+  border-radius: 50px;
+  background: linear-gradient(270deg, rgb(180, 16, 158) 10%, rgb(30, 255, 0) 100%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-resume {
+  padding: 15px 25px;
+  border-radius: 50px;
+  border: 2px solid white;
+  cursor: pointer;
+  background: linear-gradient(270deg, rgb(180, 16, 158) 10%, rgb(30, 255, 0) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.hero-connect:hover {
+  border: 2px solid rgb(30, 255, 0);
+  transform: scale(1.05);
+}
+
+.hero-resume:hover {
+  border-color: rgb(180, 16, 158);
+  transform: scale(1.05);
+}
+
+/* ✅ Responsive: Tablet */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero p {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .profile-image {
+    height: 200px;
+    margin-top: 60px;
+  }
+
+  .hero-action {
+    font-size: 20px;
+  }
+}
+
+/* ✅ Responsive: Mobile */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .profile-image {
+    height: 160px;
+    margin-top: 40px;
+  }
+
+  .hero-action {
+    flex-direction: column;
+    gap: 15px;
+    font-size: 18px;
+  }
+
+  .hero-connect,
+  .hero-resume {
+    width: 100%;
+    text-align: center;
+  }
+}

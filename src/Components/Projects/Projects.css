@@ -1,0 +1,115 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projects {
+  padding: 60px 5%;
+  background-color: black;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.projects-title {
+  font-size: 36px;
+  margin-bottom: 40px;
+  background: linear-gradient(270deg, rgb(214, 25, 173) 70%, rgb(33, 243, 6) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: fadeInUp 1s ease 0.3s forwards;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px; /* ✅ Spacing between grid items */
+  animation: fadeInUp 1s ease 0.6s forwards;
+}
+
+.project-card {
+  background: rgb(240, 186, 228);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 0; /* ✅ Vertical gap between rows */
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.1), transparent 70%);
+  transform: rotate(45deg);
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(180, 16, 158, 0.3);
+}
+
+.project-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  background: linear-gradient(270deg, rgb(180, 16, 158) 80%, rgb(30, 255, 0) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-title {
+    font-size: 28px;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card {
+    padding: 20px;
+    margin: 10px 0;
+  }
+
+  .project-card h3 {
+    font-size: 20px;
+  }
+
+  .project-card p {
+    font-size: 15px;
+  }
+}
