@@ -15,20 +15,23 @@ const Projects = () => {
       </div>
 
       <div className="project-card">
-        <h3>2. E-commerce Website</h3>
-        <p>
-          A modern, responsive e-commerce platform with product listings, cart, and checkout functionality.
-        </p>
-        <p><strong>Tech Stack:</strong> React.js, CSS, LocalStorage, REST APIs</p>
-      </div>
+  <h3>2. Movie Booking System</h3>
+  <p>
+    Built a Movie Booking System using the React for selecting and booking movie tickets. 
+    Added features like movie listings, Booking the Tickets.
+  </p>
+  <p><strong>Tech Stack:</strong> MongoDB, Express.js, React.js, Node.js</p>
+</div>
 
-      <div className="project-card">
-        <h3>3. Food Delivery App</h3>
-        <p>
-          A responsive food ordering interface for browsing food items, placing orders, and managing user carts.
-        </p>
-        <p><strong>Tech Stack:</strong> React.js, CSS, Hooks, Context API</p>
-      </div>
+<div className="project-card">
+  <h3>3. Task Manager System</h3>
+  <p>
+    Developed a Task Manager Website to create, update, and delete tasks. 
+    Included features like task filtering and deadline tracking.
+  </p>
+  <p><strong>Tech Stack:</strong> React.js, CSS, Hooks, Local Storage</p>
+</div>
+
     </div>
   );
 };
